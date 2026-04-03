@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Building Structured Programs | Beginner's Guide to Algorithms and Data Structures</title>
+    <meta
+      name="description"
+      content="A calm, beginner-friendly one-page guide to structured programming, algorithms, and data structures, with practical examples and further reading."
+    >
+    <meta name="author" content="Structured Programs Blog">
+    <meta name="theme-color" content="#4169E1">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Structured Programs Blog">
+    <meta property="og:title" content="Building Structured Programs | Beginner's Guide to Algorithms and Data Structures">
+    <meta
+      property="og:description"
+      content="A calm, beginner-friendly one-page guide to structured programming, algorithms, and data structures, with practical examples and further reading."
+    >
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Building Structured Programs | Beginner's Guide to Algorithms and Data Structures">
+    <meta
+      name="twitter:description"
+      content="A calm, beginner-friendly one-page guide to structured programming, algorithms, and data structures, with practical examples and further reading."
+    >
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body id="top">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="site-header">
+      <div class="hero-wrap">
+        <p class="eyebrow">Beginner-Friendly Academic Blog</p>
+        <h1>Building Structured Programs: A Beginner's Guide to Algorithms and Data Structures</h1>
+        <p class="lede">
+          How a beginner can choose the right approach instead of just writing code
+          and hoping it works.
+        </p>
+        <p class="hero-summary">
+          This article explains how to start from the problem, choose suitable
+          structures and algorithms, and keep a program readable as it grows.
+        </p>
+      </div>
+    </header>
+
+    <main id="main-content" class="site-main">
+      <div class="reading-shell">
+        <nav class="toc-panel" aria-labelledby="toc-title">
+          <p class="eyebrow eyebrow--compact">Contents</p>
+          <h2 id="toc-title">Jump to a section</h2>
+          <p class="toc-note">
+            Use this quick guide to move through the article or return to a key
+            section while reading.
+          </p>
+          <ol class="toc-list">
+            <li><a data-toc-link href="#start-with-the-problem">Start with the problem, not the code</a></li>
+            <li><a data-toc-link href="#use-abstraction">Use abstraction to keep the program structured</a></li>
+            <li><a data-toc-link href="#better-designs">Are some algorithms and data structure designs better than others?</a></li>
+            <li><a data-toc-link href="#applying-these-techniques">How I would apply these techniques in developing a structured program</a></li>
+            <li><a data-toc-link href="#final-takeaway">Final takeaway</a></li>
+            <li><a data-toc-link href="#course-materials">Course Materials / Further Reading</a></li>
+          </ol>
+        </nav>
+
+        <article class="article-shell" aria-labelledby="article-title">
+          <header class="article-header">
+            <h2 id="article-title" class="sr-only">Article</h2>
+            <p class="article-intro">
+              When I first started learning programming, “algorithms” sounded advanced
+              and “data structures” sounded like something only expert programmers
+              worried about. But the core idea is actually simple: an algorithm is
+              the step-by-step method for solving a problem, and a data structure is
+              the way a program organizes the data it uses.
+            </p>
+            <p>
+              Good structured programs come from matching those two things to the
+              real job the software must do, not from choosing the fanciest
+              technique you know.
+            </p>
+          </header>
+
+          <section id="start-with-the-problem" class="article-section" aria-labelledby="start-with-the-problem-title">
+            <h2 id="start-with-the-problem-title">Start with the problem, not the code</h2>
+            <p>
+              One of the most helpful ideas for a beginner is that a problem, an
+              algorithm, and a program are not the same thing. The problem is the
+              mapping from input to output. The algorithm is the concrete,
+              unambiguous, finite recipe for solving that problem.
+            </p>
+            <p>
+              The program is the actual code that implements the algorithm. That
+              order matters. If I start coding too early, I might end up with a
+              program that is organized nicely but still solves the wrong problem
+              or uses too much time and memory.
+            </p>
+            <p>
+              Before choosing a data structure, I would ask questions like these:
+              Is the data loaded once and left alone, or does it change constantly?
+              Will the program need frequent insertions and deletions? Does it need
+              exact-match searches, or does it need ordered processing and range
+              queries? Those questions matter because the “best” design depends on
+              what the program has to do most often.
+            </p>
+
+            <aside class="callout" aria-labelledby="beginner-tip-title">
+              <h3 id="beginner-tip-title">Beginner tip</h3>
+              <p>
+                Before writing code, write down the input, the output, and the
+                operations that matter most. That small habit makes the rest of the
+                design much clearer.
+              </p>
+            </aside>
+          </section>
+
+          <section id="use-abstraction" class="article-section" aria-labelledby="use-abstraction-title">
+            <h2 id="use-abstraction-title">Use abstraction to keep the program structured</h2>
+            <p>
+              Another big lesson is the difference between an abstract data type and
+              a data structure. An abstract data type defines the logical view of
+              the data and the operations you can perform on it. The data structure
+              is the physical implementation that makes that abstract view work.
+            </p>
+            <p>
+              That separation is powerful because it lets the rest of the program
+              depend on a clean interface instead of low-level storage details.
+            </p>
+            <p>
+              In a structured program, I want the rest of the code to say “use a
+              list” or “use a collection of records,” not “reach directly into this
+              array layout.” This makes the program easier to understand, test, and
+              improve later.
+            </p>
+            <p>
+              Design patterns matter here too because they show reusable ways to
+              solve recurring design problems. A useful example is the Strategy
+              pattern. It allows a larger program to swap one behavior for another
+              without changing the whole design. That kind of flexibility helps keep
+              a program structured and maintainable instead of hard-coded and messy.
+            </p>
+          </section>
+
+          <section id="better-designs" class="article-section" aria-labelledby="better-designs-title">
+            <h2 id="better-designs-title">Are some algorithms and data structure designs better than others?</h2>
+            <p>
+              Yes, but not in a universal “this one always wins” way. A better
+              design depends on the job. Every data structure has strengths and
+              weaknesses, and those tradeoffs involve time, space, and programming
+              effort.
+            </p>
+            <p>
+              If one design were best in every situation, the others would not
+              still exist. So the real question is not “Which data structure is
+              best?” but “Best for what?”
+            </p>
+            <p>
+              A simple example makes this clear. For a bank system that needs very
+              fast exact-match lookups by account number, a hash-table style
+              approach is a strong choice because fast lookup is the priority. But
+              for a city database that must answer range queries, that same
+              approach is a poor fit, and a tree-based ordered structure makes more
+              sense. If the data is created once and never changes, then an even
+              simpler linear index may be the smarter design because it solves the
+              problem without unnecessary complexity.
+            </p>
+            <p>
+              Sorting gives an even more beginner-friendly example. Insertion sort
+              is easy to understand because it builds a sorted portion of the list
+              one item at a time and inserts the next item into the correct place.
+              That simplicity makes it useful for small inputs or data that is
+              already sorted or nearly sorted.
+            </p>
+            <p>
+              In the best case, when the data is already sorted, insertion sort can
+              run in linear time. But on average and in the worst case, it grows
+              quadratically, which makes it a poor choice for large, disorganized
+              inputs.
+            </p>
+            <p>
+              That is why growth rate matters so much. A quadratic algorithm can
+              look perfectly fine on tiny inputs, yet an n log n algorithm will
+              usually scale much better as the input grows. In other words, a
+              better algorithm is often the one that handles larger input sizes
+              more efficiently, not just the one that seems easiest to code at
+              first.
+            </p>
+
+            <aside class="callout" aria-labelledby="key-takeaway-title">
+              <h3 id="key-takeaway-title">Key takeaway</h3>
+              <p>
+                The best design is the one that matches the operations and
+                constraints your program actually has to handle, not the one that
+                sounds most advanced.
+              </p>
+            </aside>
+          </section>
+
+          <section id="applying-these-techniques" class="article-section" aria-labelledby="applying-these-techniques-title">
+            <h2 id="applying-these-techniques-title">How I would apply these techniques in developing a structured program</h2>
+            <p>
+              If I were building a structured program, my first step would be to
+              write the problem in plain language before writing code. What data
+              comes in? What output must come out? What operations matter most?
+              What counts as fast enough? What memory limits matter?
+            </p>
+            <p>
+              I would even do a quick estimate to see whether my first idea is
+              realistic before spending time implementing it.
+            </p>
+            <p>
+              My second step would be to rank the operations by importance. If
+              users mostly search by exact key, I would optimize lookup. If they
+              constantly add and remove items, I would focus on update cost. If
+              the program must keep items in sorted order or answer range queries,
+              I would choose a structure that supports that naturally. This
+              prevents me from picking a design just because it is familiar.
+            </p>
+            <p>
+              My third step would be to define an interface first and hide the
+              implementation behind it. In other words, I would design around the
+              abstract data type and keep the concrete data structure inside the
+              module or class. That way, if I later discover that my first
+              implementation was too slow, I can change the underlying structure
+              without rewriting the entire program.
+            </p>
+            <p>
+              My fourth step would be to choose the algorithmic technique that
+              matches the shape of the problem. If the problem naturally breaks
+              into smaller similar pieces, recursion or divide-and-conquer might
+              make the solution clearer, as long as I define a correct base case
+              and make sure each recursive call moves closer to it.
+            </p>
+            <p>
+              If the data is small or nearly sorted, I might deliberately use
+              insertion sort because its simplicity and behavior on nearly sorted
+              data make it practical.
+            </p>
+            <p>
+              My final step would be to check both correctness and efficiency. A
+              structured program is not just code that looks neat. It is code whose
+              behavior, performance, and correctness have all been thought through.
+            </p>
+          </section>
+
+          <section id="final-takeaway" class="article-section" aria-labelledby="final-takeaway-title">
+            <h2 id="final-takeaway-title">Final takeaway</h2>
+            <p>
+              The biggest lesson for a newbie is that algorithmic design and data
+              structures are not extra topics added after programming. They are the
+              foundation of structured programming.
+            </p>
+            <p>
+              A strong program starts with a clear problem definition, separates
+              interface from implementation, chooses data structures based on
+              actual operations and constraints, and compares algorithms by how
+              they scale as input grows.
+            </p>
+            <p>
+              Some designs really are better than others, but only after you
+              define what “better” means for your specific problem.
+            </p>
+          </section>
+
+          <section id="course-materials" class="article-section resources-section" aria-labelledby="course-materials-title">
+            <h2 id="course-materials-title">Course Materials / Further Reading</h2>
+            <p>
+              These references are useful if you want to study the topic in more
+              depth after reading the article.
+            </p>
+            <ul class="resource-list">
+              <li>
+                <a href="https://people.cs.vt.edu/~shaffer/Book/JAVA3elatest.pdf">https://people.cs.vt.edu/~shaffer/Book/JAVA3elatest.pdf</a>
+              </li>
+              <li>
+                <a href="https://learn.zybooks.com/zybook/CPT307:_Data_Structures_&amp;_Algorithms_(INE2610A)/chapter/1/section/7">https://learn.zybooks.com/zybook/CPT307:_Data_Structures_&amp;_Algorithms_(INE2610A)/chapter/1/section/7</a>
+              </li>
+              <li>
+                <a href="https://www.cs.utexas.edu/~djimenez/utsa/cs1723/lecture2.html">https://www.cs.utexas.edu/~djimenez/utsa/cs1723/lecture2.html</a>
+              </li>
+            </ul>
+          </section>
+        </article>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-wrap">
+        <p class="footer-copy">
+          <small>
+            <span data-current-year>2026</span> Structured Programs Blog. Built as
+            a no-build static site with HTML, CSS, and vanilla JavaScript.
+          </small>
+        </p>
+        <nav class="footer-nav" aria-label="Footer">
+          <a href="#top">Back to top</a>
+          <a href="#course-materials">Further reading</a>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>

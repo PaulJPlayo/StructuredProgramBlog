@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="favicon-title">
+  <title id="favicon-title">Structured Programs Blog</title>
+  <rect width="64" height="64" rx="14" fill="#4169E1" />
+  <path d="M18 18.5c0-1.9 1.6-3.5 3.5-3.5H32v33H22c-2.2 0-4 1.8-4 4Z" fill="#EAF1FF" />
+  <path d="M46 18.5c0-1.9-1.6-3.5-3.5-3.5H32v33h10c2.2 0 4 1.8 4 4Z" fill="#FFFFFF" />
+  <path d="M32 15v37" fill="none" stroke="#2F52D0" stroke-width="2.75" />
+  <path d="M23.5 26H29M23.5 33H29M35 26h5.5M35 33h5.5" fill="none" stroke="#2F52D0" stroke-linecap="round" stroke-width="3" />
+</svg>
